@@ -1,0 +1,12 @@
+.link-li{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: 200ms;
+}
+.link-li:hover{
+    color: green;
+    transform: scale(1.01);
+    transition: 200ms;
+}

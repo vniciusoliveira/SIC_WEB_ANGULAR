@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body, .dark-background{
+    width: 100%;
+    height: 100%;
+  }
+  
+  *{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .pct100{ height: 100%; width: 100% ; }
+
+  .txt-center{
+    text-align: center;
+  }
+
+  .center-g{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+
+
+
+  /* config gerais  */
+  .tableConfig{
+    border-collapse: collapse;
+    width: 80%;
+    filter: drop-shadow(1px 1px 0px rgb(0, 136, 54)) drop-shadow(-1px -1px 0px rgb(0, 136, 54));
+    
+  }
+
+  .tableConfig table{border-radius: 7px;}
+
+  .tableConfig tr:last-child{border-radius: 0px 0px 15px 15px;}
+
+  .tableConfig th{
+    background-color: #25854d;
+    font-weight: bolder;
+    text-align: center;
+    color: #FFF;
+    padding: 0px 5px;
+  }
+
+  .tableConfig td{
+    text-align: center;
+  }
+
+  .tableConfig th:first-child{border-radius: 15px 0px 0px 0px;} 
+  .tableConfig th:last-child{border-radius: 0px 15px 0px 0px;}
+
+  .tableConfig tr:nth-child(odd) {background-color: #FFF;} 
+  .tableConfig tr:nth-child(even) {background-color: #d3ffe5;}
+
+  .btnStyle{
+    background-color: #25854d;
+    color: #FFF;
+    font-weight: bold;
+    padding: 2px; border-radius: 5px;
+  }
+
+  .overBtn{
+    position: sticky;
+    top:0px;
+  }

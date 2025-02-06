@@ -1,0 +1,106 @@
+<div class="container">
+    <div class="header">
+      <div class="header-content">
+        <img src="assets/logo des.grafico.png" alt="logoTMKT">
+        <h3>Consultar CHAT - {{nrreg}}</h3>
+      </div>
+      <div class="header-content">
+        <img src="assets/logo_white_2.png" alt="imageTMKT">
+      </div>
+      <div class="header-content">
+        <h3>Sair</h3>
+        <a href="http://intranet.tmktbrasil.com.br">
+          <svg xmlns="http://www.w3.org/2000/svg" title="Sair" width="32" height="32" fill="currentColor"
+            class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+            <title>Sair</title>
+            <path fill-rule="evenodd"
+              d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z" />
+            <path fill-rule="evenodd"
+              d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card-holder">
+        <div class="card">
+          <div class="card-row center-g">
+            <h3>Consultar</h3>
+          </div>
+          <hr>
+
+            <div class="card-row">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                  </svg>
+                <label form="login" class="form-label">Remetente: </label>
+                <input type="text" class="form-control" name="inp_remetente" autocomplete="off" required>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+                <label form="login" class="form-label">Destinatario: </label>
+                <input type="text" class="form-control" name="inp_destinatario" autocomplete="off" >
+            </div>
+
+            <div class="card-row">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-calendar-event" viewBox="0 0 16 16">
+                    <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
+                </svg>
+                <label form="login" class="form-label">Data inicial: </label>
+                <input type="date" class="form-control txt-center" name="dtini" >
+                <svg xmlns="http://www.w3.org/2000/svg"  fill="currentColor" class="bi bi-calendar-fill" viewBox="0 0 16 16">
+                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5h16V4H0V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5"/>
+                </svg>
+                <label form="login" class="form-label">Data Final: </label>
+                <input type="date" class="form-control txt-center" name="dtend" >
+            </div>
+            <div class="card-row">
+              <button class="fakebtn" (click)="onSubmitArquivo()">Exportar</button>
+              <button class="fakebtn" (click)="onSubmit()">Visualizar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div class="centraliza-mensagem" *ngIf="sucesso || erro " >
+      <div class="erro-true" *ngIf="erro==true">
+        <h2>Erro!</h2>
+        <p>{{mensagemErro}}</p>
+        <button (click)="btnErro()">OK</button>
+      </div>
+    </div> -->
+  
+    <div [ngClass]="{'modal-div-visible':carregamento == true}" class="modal-div">
+        <div class="load-icon">
+            <img src="assets/logo des.grafico.png" alt="">
+        </div>
+        <div class="load-icon spin">
+            <img src="assets/226359_half.png" >
+        </div>
+    </div>
+
+    <div [ngClass]="{'modal-div-visible':chatView == true}" class="modal-div" (click)="fecharChatView()">
+        <div class="modal-chat" >
+            <div *ngFor="let chatObj of listChat">
+                
+                <div class="msg-container" [ngClass]="{'msg-remetente':chatObj.remetenteFLG == 1, 'msg-destinatario':chatObj.remetenteFLG == 0}">
+                    <div class="msg-name">
+                        <h5>{{ chatObj.matricula }} - {{  chatObj.remetente.substring(0, chatObj.remetente.indexOf(" ",chatObj.remetente.indexOf(" ")))}}</h5>
+                    </div>
+                    <div class="msg-content">
+                        <p>
+                            {{ chatObj.mensagem }}
+                        </p>
+                    </div>
+                    <div class="msg-time">
+                        <p>{{ chatObj.dataEnvio | date:'dd/MM/yyyy' }}-{{ chatObj.horaEnvio}} |<span class="msg-lida"> {{ chatObj.dataLido | date:'dd/MM/yyyy' }}-{{ chatObj.horaLido }}</span> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
